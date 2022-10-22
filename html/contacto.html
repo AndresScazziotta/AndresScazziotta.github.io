@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estilo.css">
+    <title>News Series</title>
+</head>
+<body>
+    <header>
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="../html/inicio.html">Inicio</a></li>
+                <li><a href="../html/estrenos.html">Estrenos</a></li>
+            </ul>
+            <h1><a href="../html/inicio.html">NEWS SERIES</a></h1>
+            <ul class="menu-2">
+                <li><a href="../html/newsletter.html">Newsletter</a></li>
+                <li><a href="../html/contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- h2 de prueba para ver si navega bien por las paginas -->
+        <!-- <h2 style="color: #fff">Contacto</h2> -->
+        <form action="https://formsubmit.co/ascazziotta84@gmail.com" method="POST" name="formulario">
+            <h2>Contacto</h2>
+            <input type="text" name="Nombre" placeholder="Nombre" >
+            <input type="email" name="Correo" placeholder="Correo" >
+            <input type="number" name="Telefono" placeholder="Teléfono" >
+            <textarea name="mensaje" placeholder="Escriba aquí su mensaje" ></textarea>
+            <input type="submit" value="Enviar" id="boton">
+        </form>
+
+        <script>
+            (function() {
+            var formulario = document.getElementsByName('formulario')[0],
+                elementos = formulario.elements,
+                boton = document.getElementById('btn');
+
+            var validarNombre = function(e){
+                if(formulario.Nombre.value == 0) {
+                    alert("Completa el campo nombre")
+                    e.preventDefault();
+                }
+            };
+
+            var validarCorreo = function(e){
+                if(formulario.Correo.value == 0) {
+                    alert("Completa el campo correo")
+                    e.preventDefault();
+                }
+            };
+
+            var validarTelefono = function(e){
+                if(formulario.Telefono.value == 0) {
+                    alert("Completa el campo Teléfono")
+                    e.preventDefault();
+                }
+            };
+
+            
+            
+            var validar = function(e){
+                validarNombre(e);
+                validarCorreo(e);
+                validarTelefono(e);                
+            };
+
+            formulario.addEventListener("submit", validar);
+        }())
+        </script>
+
+        <h2 class="api">
+            <img src="../imagenes/whats.png" height="30px">
+            <a href="https://api.whatsapp.com/send?phone=1137778541" target="_blank">
+            ¡Envianos un mensaje por Whatsapp!
+            </a>        
+        </h2>
+        
+    </main>
+    <footer>
+        <p class="redessociales">Redes Sociales</p>
+        <div class="redes">
+            <a href="https://www.instagram.com/imdb/" target="_blank"><img src="../imagenes/logo_redsocial1.png" alt="Logo Instagram"></a>
+            <a href="https://open.spotify.com/artist/5vNV1sc1Xr8AlGCVHMWnO4" target="_blank"><img src="../imagenes/logo_redsocial2.png" alt="Logo Spotify"></a>
+            <a href="https://www.youtube.com/IMDB" target="_blank"><img src="../imagenes/logo_redsocial3.png" alt="Logo You Tube"></a>
+            <a href="https://www.tiktok.com/@imdb" target="_blank"><img src="../imagenes/logo_redsocial4.png" alt="Logo TikTok"></a>
+        </div>
+        <p class="derechos">@Derechos reservados 2022</p>
+    </footer>
+
+    <script src="../script/index.js"></script>
+</body>
+</html>
